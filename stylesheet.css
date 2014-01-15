@@ -1,8 +1,6 @@
-
-/*div {
-   	border: 1px solid black;
-
-}*/
+.board {
+	width: 300px;
+}
 
 .row > div {
 	width: 100px;
@@ -15,10 +13,6 @@
 	display: flex;
 	-webkit-flex-flow: row;
 	flex-flow: row;
-}
-
-.board {
-	width: 300px;
 }
 
 .square {
