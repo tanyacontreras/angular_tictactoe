@@ -4,13 +4,14 @@
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
 	</head>
-	<body ox-ng-init="lola = ''">
+	<body x-ng-init="lola = ''">
 	<div id="header">
 		<h4>angular tictactoe</h4>
 	</div>
 	<div class="board">
 		<div class="row">
-			<div id="a1" class="square"></div>
+			<!-- add images here -->
+			<div id="a1" class="square" x-ng-click="lola='images/lola.jpg' ; "></div>
 			<div id="a2" class="square"></div>
 			<div id="a3" class="square"></div>
 		</div>
