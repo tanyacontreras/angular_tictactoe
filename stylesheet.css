@@ -1,0 +1,26 @@
+
+/*div {
+   	border: 1px solid black;
+
+}*/
+
+.row > div {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+}
+
+.row {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow: row;
+}
+
+.board {
+	width: 300px;
+}
+
+.square {
+	border: 1px solid black;
+}
