@@ -1,20 +1,33 @@
-.board {
+#main {
+	background-image: url('images/wallpaper.jpg');
+
+}
+
+#header {
+	text-align: center;
+	color: #95cc79;
+	font-family: 'Ribeye', cursive;
+	font-size: 30px;
+	background-color: white;
+	height: 70px;
 	width: 300px;
+	margin: 0 auto;
+	line-height: 70px;
+	border-radius: 40px;	
 }
 
-.row > div {
-	width: 100px;
-	height: 100px;
-	line-height: 100px;
+.board {
+	margin: 0 auto;
 }
-
-.row {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row;
-	flex-flow: row;
+		
+.cell {
+	float:left; 
+	height: 100px; 
+	width: 100px; 
+	background-color: white; 
+	margin: 3px;
 }
-
-.square {
-	border: 1px solid black;
+		
+.clear {
+	clear:both;
 }

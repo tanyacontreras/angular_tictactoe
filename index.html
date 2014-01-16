@@ -1,32 +1,22 @@
+<!DOCTYPE html>
 <html>
-	<head x-ng-app="">
-		<title>Charlie and Lola | Tic Tac Toe</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
-	</head>
-	<body x-ng-init="lola = ''">
-	<div id="header">
-		<h4>angular tictactoe</h4>
-	</div>
-	<div class="board">
-		<div class="row">
-			<!-- add images here -->
-			<div id="a1" class="square" x-ng-click="lola='images/lola.jpg' ; "></div>
-			<div id="a2" class="square"></div>
-			<div id="a3" class="square"></div>
-		</div>
-		<div class="row">
-			<div id="a4" class="square"></div>
-			<div id="a5" class="square"></div>
-			<div id="a6" class="square"></div>
-		</div>
-		<div class="row">
-			<div id="a7" class="square"></div>
-			<div id="a8" class="square"></div>
-			<div id="a9" class="square"></div>
+<head>
+	<title>Charlie and Lola | TicTacToe</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+	<script type="text/javascript" src="javascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>	
+</head>
+<body id="main">
+	<div id="header">Charlie and Lola</div>
+	<div id="" class="board" x-ng-app="" x-ng-init="cells=['','','','','','','','','']; mark = {val:true};">
+		<div x-ng-repeat="c in cells track by $index" 
+			id="{{$index}}"
+			x-ng-class="{cell:true, clear:$index == 3 || $index == 6}" 
+			x-ng-click="cells[$index] = (cells[$index] == '' ? ((mark.val = !mark.val) ? 'X' : 'O'	) : cells[$index]);">
+			{{c}}
 		</div>
 	</div>
- </body>
 
-
+</body>
 </html>
