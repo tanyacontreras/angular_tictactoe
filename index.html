@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html x-ng-app="">
 <head>
 	<title>Charlie and Lola | TicTacToe</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
-	<script type="text/javascript" src="javascript.js"></script>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>	
 </head>
 <body id="main">
@@ -13,7 +13,7 @@
 		<div x-ng-repeat="c in cells track by $index" 
 			id="{{$index}}"
 			x-ng-class="{cell:true, clear:$index == 3 || $index == 6}" 
-			x-ng-click="cells[$index] = (cells[$index] == '' ? ((mark.val = !mark.val) ? 'X' : 'O'	) : cells[$index]);">
+			x-ng-click="cells[$index] = (cells[$index] == '' ? ((mark.val = !mark.val) ? 'O' : 'X'	) : cells[$index]);">
 			{{c}}
 		</div>
 	</div>
