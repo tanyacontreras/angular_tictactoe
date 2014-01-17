@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html x-ng-app="">
+<html>
 <head>
 	<title>Charlie and Lola | TicTacToe</title>
 	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
@@ -7,14 +7,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Ribeye' rel='stylesheet' type='text/css'>	
 </head>
-<body id="main">
-	<div id="header">Charlie and Lola</div>
-	<div id="" class="board" x-ng-app="" x-ng-init="cells=['','','','','','','','','']; mark = {val:true};">
-		<div x-ng-repeat="c in cells track by $index" 
-			id="{{$index}}"
-			x-ng-class="{cell:true, clear:$index == 3 || $index == 6}" 
-			x-ng-click="cells[$index] = (cells[$index] == '' ? ((mark.val = !mark.val) ? 'O' : 'X'	) : cells[$index]);">
-			{{c}}
+<body x-ng-app="" x-ng-controller="mainCtrl">
+	<h2>Current Player: {{currentPlayer}}</h2>
+	<div x-ng-repeat="row in gameBoard track by $index">
+		<div x-ng-repeat="cell in gameBoard track by $index" x-ng-click=""playerTurn($parent.$index, $index)>
+			{{cell}}
 		</div>
 	</div>
 
