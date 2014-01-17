@@ -1,11 +1,12 @@
-#main {
+body {
 	background-image: url('../images/wallpaper.jpg');
+	font-family: 'Ribeye', cursive;
+
 }
 
 #header {
 	text-align: center;
 	color: #95cc79;
-	font-family: 'Ribeye', cursive;
 	font-size: 30px;
 	background-color: white;
 	height: 70px;
@@ -15,18 +16,37 @@
 	border-radius: 40px;	
 }
 
-.board {
+.tag {
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	background-color: #95cc79;
+	margin-top: 5px;
+	height: 50px;
+	width: 270px;
+	line-height: 50px;
+	border-radius: 30px;
 	margin: 0 auto;
 }
 		
+.row {
+	height: 101px; 
+	width: 306px; 
+	background-color: white	; 
+	margin-top: 5px;
+	clear: both;
+	border-color: lime;
+	margin: 0 auto;
+}
+
 .cell {
-	float:left; 
-	height: 100px; 
-	width: 100px; 
-	background-color: white; 
-	margin: 3px;
+	height: 100px;
+	width: 100px;
+	border: 1px solid #95cc79;
+	float: left;
+	text-align: center;
+}
+#reset {
+
 }
 		
-.clear {
-	clear:both;
-}
