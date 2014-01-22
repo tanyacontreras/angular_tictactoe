@@ -1,0 +1,25 @@
+/*body {
+	background-image: url('..images//wallpaper.jpg');
+	font-family: 'Ribeye', cursive;
+}*/
+
+.cell {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	float: left;
+	margin: 5px;
+}
+
+.clear {
+	clear: both;
+}
+
+.message {
+	margin: 5px;
+}
+
+img {
+	height: 100px;
+	width: 100px;
+}
