@@ -33,7 +33,6 @@ function boardCtrl($scope) {
 		$scope.winAry = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
 		for (var i = 0; i < 8; i++) {
 			if ($scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][1]] && $scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][2]] && $scope.boxes[$scope.winAry[i][0]] != "") {
-				alert('do something!');
 				$scope.message = "Winner!";
 				$scope.win = true;
 				break;
