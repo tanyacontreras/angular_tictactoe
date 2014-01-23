@@ -1,9 +1,9 @@
-function boardCtrl ($scope) {
+function boardCtrl($scope) {
 	$scope.boxes = ["","","","","","","","",""];
-	$scope.turnCounter = 1;
-	$scope.boardActive = true;
+	$scope.turnCounter = 0;
 	$scope.players = [{name: "Charlie", image: "images/heart.jpg"}, {name: "Lola", image:"images/lola.jpg"}];
 	$scope.xTurn = $scope.players[0].image;
+	$scope.win = false;
 	
 	$scope.takeTurn = function (i) {
 		if ($scope.boxes[i] == "") {
@@ -14,33 +14,34 @@ function boardCtrl ($scope) {
 				$scope.xTurn = $scope.players[0].image
 			};
 		} else {
-			alert('taken!')
+			$scope.message = "Taken!";
 		};
-		if ($scope.turnCounter >= 5) {
+		if ($scope.turnCounter >= 4) {
 		 	$scope.checkWin();
-		 	$scope.resetBoard();
 		};
 		$scope.turnCounter++;
 	};
 
 	$scope.resetBoard = function() {
 		$scope.boxes = ["","","","","","","","",""];
-		$scope.winner = "";
-	}
+		$scope.message = "";
+		$scope.win = false;
+		$scope.turnCounter = 0;
+	};
 
 	$scope.checkWin = function () {
 		$scope.winAry = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
 		for (var i = 0; i < 8; i++) {
 			if ($scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][1]] && $scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][2]] && $scope.boxes[$scope.winAry[i][0]] !== "") {
-					$scope.winner = "winner!";
-					$scope.boardActive = false;
-					resetBoard();
-					break;
+				alert('do something!');
+				$scope.message = "Winner!";
+				$scope.win = true;
+				break;
 				}
-			// else {
-			// 		// alert("im checking winAry position:  "+ i)
-			// };
 		};
-	}
+			if ($scope.win == false && $scope.turnCounter == 9){
+				$scope.message = "Cat's Game!";
+			};
+	};
 };
 
