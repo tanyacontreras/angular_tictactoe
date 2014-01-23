@@ -1,8 +1,8 @@
 body {
 	background-image: url('images/wallpaper.jpg');
-	font-family: 'Ribeye', cursive;
 }
-.header {
+
+#header {
 	border-radius: 100px;
 	font-size: 35px;
 	color: #97CB64;
@@ -10,16 +10,33 @@ body {
 	height: 60px;
 	width: 300px;
 	text-align: center;
+	font-family: 'Ribeye', cursive;
+	margin: 0 auto;
+	margin-top: -25px;
 }
 
-.message {
-	background-color: white;
-	color: #97CB64;
+#message {
+	background-color: #97CB64;
+	margin: 0 auto;
+	color: white;
 	border-radius: 100px;
 	height: 50px;
 	width: 200px;
 	font-size: 14px;
 	text-align: center;
+	font-family: 'Ribeye', cursive;
+}
+
+#reset {
+	background-color: #97CB64;
+	color: white;
+	border-radius: 100px;
+	height: 50px;
+	width: 50px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 45px;
+	display: none;
 }
 
 .cell {
@@ -44,7 +61,6 @@ img {
 	background-color: #97CB64;
 }
 
-#reset {
-
+a:link {
+	text-decoration: none;
 }
-

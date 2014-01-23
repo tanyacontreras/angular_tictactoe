@@ -7,17 +7,20 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
 		<!-- // <script src="https://cdn.firebase.com/v0/<firebase class="j"></firebase>s"></script> -->
 		<!-- // <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script> -->
-		<meta charset="UTF-8">
 	</head>
+	
 	<body>
-		<div class="header"><h4>Charlie and Lola</h4></div>
+		<div id="header"><h4>Charlie and Lola</h4></div>
 		<div x-ng-controller="boardCtrl">
-		<div class="message"><h1>{{message}}</h1></div>
+		<div id="message"><h1>{{message}}</h1></div>
+		<br />
+		<div id="reset" x-ng-click="resetBoard()"><a href="">Reset</a></div>
 			<br />
-			<div x-ng-repeat="box in boxes track by $index" x-ng-class="{cell:true, clear: $index % 3 == 0}" x-ng-click="takeTurn($index)">
-				<img src="{{box}}"/>
+			<div>
+				<div x-ng-repeat="box in boxes track by $index" x-ng-class="{cell:true, clear: $index % 3 == 0}" x-ng-click="takeTurn($index)">
+					<img src="{{box}}"/>
+				</div>
 			</div>
-			<input type="button" id="reset"x-ng-click="resetBoard()" value="Reset" />
 		</div>
 	</body>
 </html>
