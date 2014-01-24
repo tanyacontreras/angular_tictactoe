@@ -13,14 +13,14 @@
 		<div id="header"><h4>Charlie and Lola</h4></div>
 		<div x-ng-controller="boardCtrl">
 		<div id="message"><h1>{{message}}</h1></div>
-		<div id="reset" x-ng-click="resetBoard()">Reset</div>
-
-<!-- 		<div id="reset" x-ng-click="resetBoard()"><a href="">Reset</a></div>-->
+			
 			<div id="board">
 				<div x-ng-repeat="box in boxes track by $index" x-ng-class="{cell:true, clear: $index % 3 == 0}" x-ng-click="takeTurn($index)">
 					<img src="{{box}}"/>
 				</div>
 			</div>
+		
+		<div id="reset" x-ng-click="resetBoard()">Reset</div>
 
 		</div>
 	</body>
