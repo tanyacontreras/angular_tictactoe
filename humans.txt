@@ -1,0 +1,17 @@
+/* TEAM */
+	Developer: Tanya Contreras
+	Twitter: @_TanyaContreras
+	LinkedIn: www.linkedin.com/pub/tanya-contreras/59/279/73/
+	From: Los Angeles, California, United States
+
+/* THANKS */
+	My Inspiration: Mia Alessandra
+	Relationship: 4 year old daughter
+	From: Bakersfield, California, United States
+		
+
+/* SITE */
+	Last update:2014.24.01
+	Language: English
+	Doctype:HTML, Angular.js, AngularFire
+	IDE: Sublime Text, GIMP

@@ -22,6 +22,15 @@ body {
 	margin-top: -35px;
 }
 
+#humans-txt {
+	text-align: right;
+}
+
+a:link {
+	/*color: white;*/
+	text-decoration: none;
+}
+
 #message {
 	background-color: #97CB64;
 	margin: 0 auto;
@@ -75,6 +84,6 @@ img {
 	background-color: #97CB64;
 }
 
-a:link {
-	text-decoration: none;
-}
+
+
+
