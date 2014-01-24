@@ -4,8 +4,10 @@ function boardCtrl($scope) {
 	$scope.players = [{name: "Charlie", image: "images/charlie.jpg"}, {name: "Lola", image:"images/lola.jpg"}];
 	$scope.xTurn = $scope.players[0].image;
 	$scope.win = false;
+	$scope.message = "Ready? Go!"
 	
 	$scope.takeTurn = function (i) {
+		$scope.message = "";
 		if ($scope.boxes[i] == "") {
 			$scope.boxes[i] = $scope.xTurn;
 			if ($scope.boxes[i] == $scope.players[0].image) {
@@ -27,6 +29,8 @@ function boardCtrl($scope) {
 		$scope.message = "";
 		$scope.win = false;
 		$scope.turnCounter = 0;
+		$scope.message = "Ready? Go!"
+
 	};
 
 	$scope.checkWin = function () {
@@ -44,3 +48,6 @@ function boardCtrl($scope) {
 	};
 };
 
+
+//what needs to be stored in the cloud?
+//line 15-16, board and xturn
