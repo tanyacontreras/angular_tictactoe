@@ -25,6 +25,7 @@ function boardCtrl($scope) {
 		if ($scope.turnCounter >= 4) {
 		 	$scope.checkWin();
 		};
+		console.log($scope.boxes);
 	};
 
 	$scope.resetBoard = function() {
@@ -41,8 +42,6 @@ function boardCtrl($scope) {
 		for (var i = 0; i < 8; i++) {
 			if ($scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][1]] && $scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][2]] && $scope.boxes[$scope.winAry[i][0]] != "") {
 				$scope.message = $scope.players[0].name + ' wins!';
-
-				//if counter is
 				$scope.win = true;
 				gameOver = true;
 				break;
@@ -58,3 +57,8 @@ function boardCtrl($scope) {
 
 //what needs to be stored in the cloud?
 //line 15-16, board and xturn
+
+//read lola or charlie for message
+//highlight winning row
+//answer..look for even and odd. 
+
