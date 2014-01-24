@@ -30,25 +30,26 @@ body {
 	border-radius: 100px;
 	height: 50px;
 	width: 200px;
-	font-size: 14px;
+	font-size: 10px;
 	text-align: center;
-	font-family: 'Ribeye', cursive;
+	line-height: 45px;
 }	
 
 #reset {
-	background-color: white;
+	background-color: #FFECB3;
 	margin: 0 auto;
 	color: black;
 	border-radius: 50%;
-	height: 100px;
-	width: 100px;
+	height: 60px;
+	width: 60px;
 	font-size: 14px;
 	text-align: center;
-	line-height: 100px;
-	/*display: none;*/
+	line-height: 60px;
 	position: absolute;
 	margin-left: 582px;
 	margin-top: 5px;
+	cursor: pointer;
+	display: none;
 }
 
 .cell {

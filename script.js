@@ -8,7 +8,7 @@ function boardCtrl($scope) {
 	$scope.message = "Ready? Go!";
 	
 	$scope.takeTurn = function (i) {
-		$scope.message = "";
+		document.getElementById('reset').style.display='inline';
 		if ($scope.boxes[i] == "" && gameOver == false) {
 			$scope.boxes[i] = $scope.xTurn;
 			if ($scope.boxes[i] == $scope.players[0].image) {
@@ -29,11 +29,11 @@ function boardCtrl($scope) {
 
 	$scope.resetBoard = function() {
 		$scope.boxes = ["","","","","","","","",""];
-		$scope.message = "";
-		$scope.win = false;
 		$scope.turnCounter = 0;
-		$scope.message = "Ready...Go!"
-
+		$scope.win = false;
+		gameOver = false;
+		$scope.message = "Ready...Go!";
+		document.getElementById('reset').style.display='none';
 	};
 
 	$scope.checkWin = function () {
