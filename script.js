@@ -5,7 +5,7 @@ function boardCtrl($scope) {
 	$scope.xTurn = $scope.players[0].image;
 	$scope.win = false;
 	gameOver = false;
-	$scope.message = "Ready? Go!";
+	$scope.message = "Ready...Go!";
 	
 	$scope.takeTurn = function (i) {
 		document.getElementById('reset').style.display='inline';
@@ -41,6 +41,8 @@ function boardCtrl($scope) {
 		for (var i = 0; i < 8; i++) {
 			if ($scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][1]] && $scope.boxes[$scope.winAry[i][0]] == $scope.boxes[$scope.winAry[i][2]] && $scope.boxes[$scope.winAry[i][0]] != "") {
 				$scope.message = $scope.players[0].name + ' wins!';
+
+				//if counter is
 				$scope.win = true;
 				gameOver = true;
 				break;

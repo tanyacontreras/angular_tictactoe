@@ -25,7 +25,7 @@ body {
 #message {
 	background-color: #97CB64;
 	margin: 0 auto;
-	margin-top: -10px;
+	margin-top: -5px;
 	color: white;
 	border-radius: 100px;
 	height: 50px;
@@ -36,17 +36,18 @@ body {
 }	
 
 #reset {
-	background-color: #FFECB3;
+	background-color: #97CB64;
 	margin: 0 auto;
-	color: black;
+	color: white;
 	border-radius: 50%;
 	height: 60px;
 	width: 60px;
-	font-size: 14px;
+	font-size: 18px;
+	font-weight: 600;
 	text-align: center;
 	line-height: 60px;
 	position: absolute;
-	margin-left: 582px;
+	margin-left: 600px;
 	margin-top: 5px;
 	cursor: pointer;
 	display: none;
